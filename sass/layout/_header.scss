@@ -1,0 +1,35 @@
+@use '../abstracts/variables' as v;
+
+.header {
+    background-color: v.$header-bg-color;
+    color: v.$header-text-color;
+    padding: v.$header-padding;
+    box-shadow: v.$header-box-shadow;
+
+    .logo {
+        font-size: v.$logo-font-size;
+        font-weight: v.$logo-font-weight;
+    }
+
+    .nav {
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+
+            li {
+                margin-right: v.$nav-item-margin;
+
+                a {
+                    text-decoration: none;
+                    color: v.$nav-link-color;
+
+                    &:hover {
+                        color: v.$nav-link-hover-color;
+                    }
+                }
+            }
+        }
+    }
+}
