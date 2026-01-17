@@ -1,0 +1,20 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+html * {
+    font-family: v.$primary-font;
+    // max-width: 1200px;
+   
+}
+ 
+body {
+    overflow-x: hidden;
+     @include m.breakpoint(desktop){
+        max-width: 1800px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center;     /* Centra verticalmente */
+        min-height: 100vh;       /* Asegura que ocupe toda la altura de la ventana */
+        // margin: 0;
+    }
+} 

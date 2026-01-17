@@ -1,0 +1,84 @@
+@use '../abstracts/variables' as v;
+@use'../abstracts/mixins' as m;
+
+footer{
+    margin-top: 64px;
+    padding-top: 32px;
+    padding-left: 16px;
+    padding-right: 16px; 
+    background-color: v.$black;
+    color: v.$white;
+    padding: 48px 32px;
+    @include m.breakpoint(tablet){
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        }
+    .container{
+        @include m.breakpoint(tablet){
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            p{
+                width: 40%;
+                font-weight: 200;   
+                font-size: 16px;
+                margin-top: 0px;
+            }
+            .redes{
+                margin-top: 0px;
+                    }
+            }
+        @include m.breakpoint(desktop){
+            padding: 80px 165px;
+            h2{
+                font-size: 45px;
+                line-height: 0.9;
+            }
+            p{
+                font-size: 18px;
+                width: 28%;
+            }
+            }
+        }
+    h2{
+        font-size: 24px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    p{
+        margin-top: 16px;
+        font-size: 22px;
+        font-weight: 200;
+        font-family: v.$secondary-font;
+    }
+.redes{
+        display: flex;
+        margin-top: 32px;
+        gap: 16px;
+        align-items: flex-start;
+        img{
+            width: 32px;
+            height: 32px;
+            // filter: invert(1);
+        }
+    }
+}
+.footer__maps{
+    margin-top: 0px;
+    color: v.$black;
+    background-color: v.$gold;
+    p{
+        font-size: 16px;
+        font-weight: 300;
+    }
+     @include m.breakpoint(desktop){
+        max-width: 1200px;
+        // padding: 0px 165px 80px 165px;
+    }
+}
+.icono{
+    fill: v.$black;
+    width: 20px;
+    height:20px;
+}

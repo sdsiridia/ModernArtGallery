@@ -1,0 +1,236 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.main{
+    margin-top: 104px;
+    padding-left: 16px;
+    padding-right: 16px;     
+    @include m.breakpoint(desktop){
+        padding-left: 165px;
+        padding-right: 165px;    
+        padding-top: 180px; 
+    }   
+    img{
+        margin-top: 16px;
+        width: 100%;
+    }
+    h1{
+        margin-top: 32px;
+        color: v.$black;
+        font-size: 48px;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 1;
+        letter-spacing: 1px;
+    }
+    p{
+        margin-top: 16px;
+        color: v.$gray;
+        font-family: v.$secondary-font;
+        font-size: 22px;
+        font-weight: 200;
+        margin-top: 32px;
+        
+    }
+    .spacer{
+        background-color: v.$black;
+        h1{
+        padding: 48px 24px 24px 24px;
+        color: v.$white;
+        }
+        p{
+        padding: 0px 24px 47px 24px;
+        color: v.$white;
+        font-family: v.$secondary-font;    
+        }
+    }
+    &__box-1{
+        .picture-2_tablet, .picture-2_desktop{
+        display: none;
+        }
+        @include m.breakpoint(tablet){
+            display: flex;
+            padding-left: 39px;
+            padding-right: 40px;
+            // justify-content: space-between;
+            // gap: 16px;
+            .picture-2_tablet{
+            display: block;
+            width: 55%;
+            }
+            h1{
+            width: 60%;
+            font-size: 50px;
+            }
+            p{
+            width: 60%; 
+            font-size: 18px;              
+            }
+        .picture-2, .picture-2_desktop{
+            display: none;
+        }    
+        }
+        @include m.breakpoint(desktop){
+            display: flex;
+            // padding-left: 165px;
+            // padding-top: 180px;
+            // padding-right: 160px;
+            // justify-content: space-between;
+            // gap: 16px;
+            .main__title{
+                display: flex;
+                flex-direction: column;
+                // justify-content: left;
+                align-items: flex-start;
+                padding-top: 5%;
+                padding-left: 10%;
+            }
+            .picture-2_desktop{
+            display: block;
+            width: 50%;
+            // gap:75px
+            }
+            h1{
+            // text-align: left;
+            width: 60%;
+            font-size: 50px;
+            }
+            p{
+            // text-align: left;
+            width: 40%; 
+            font-size: 18px;              
+            }
+        .picture-2, .picture-2_tablet{
+            display: none;
+        }    
+        }
+    }
+    &__box-2{
+        .picture-3_tablet, .picture-4_tablet, .picture-3_desktop, .picture-4_desktop{
+        display: none;}
+        @include m.breakpoint(tablet){
+            display: flex;
+            padding-left: 39px;
+            padding-right: 40px;
+            gap: 11px;
+            margin-top: 30px;
+            .picture-3_tablet{
+            display: block;
+            width: 55%;
+            }
+            h1{
+            width: 60%;
+            font-size: 50px;
+            }
+            p{
+            width: 60%; 
+            font-size: 18px;              
+            }
+            .picture-4_tablet{
+            display: block;}
+            .picture-3, .picture-4, .picture-3_desktop, .picture-4_desktop{
+            display: none;
+            }
+        }    
+        @include m.breakpoint(desktop){
+            display: flex;
+            padding-left: 39px;
+            padding-right: 40px;
+            gap: 30px;
+            .picture-3_desktop{
+            display: block;
+            object-fit: cover;
+            width: 60%;
+            max-height: 920px;
+            }
+            h1{
+            width: 60%;
+            font-size: 50px;
+            }
+            p{
+            // width: 40%; 
+            font-size: 18px;
+            }
+            .picture-3, .picture-3_tablet{
+            display: none;
+            }
+            .picture-4_desktop{
+            display: block;
+            // width: 50%;
+        }
+            .picture-3, .picture-4, .picture-3_tablet, .picture-4_tablet{
+            display: none;
+            }
+            .spacer{
+                margin-top: 30px;
+                padding: 65px 47px 10px 48px;
+                // margin-bottom: 170px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: left;
+                span{
+                    display: block;
+                }
+                h1{ 
+                    // margin: 30px;
+                    padding: 0;
+                    padding-left: 20px;
+                    font-size: 70px;
+                    
+                    
+                    }
+                    p{
+                    width: 90%;
+                    margin-top: 30px;
+                    font-size: 28px;
+                    // margin-bottom: 240px;
+                    }
+        }
+    }
+    }
+
+&__box3{
+    @include m.breakpoint(tablet){
+        .spacer{
+                h1{ margin: 0;
+                    padding: 0;
+                    font-size: 50px;
+                    color: red;
+                    }
+                }
+        }
+}
+}
+.main__maps{
+    background-color: v.$black;
+    margin:0;
+    padding: 0px 16px 56px 16px;
+    h1{
+        padding-top: 48px;
+        color: v.$white;
+        font-size: 48px;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 1;
+        letter-spacing: 1px;
+    }
+    h2{
+        margin-top: 48px;
+        color: v.$gold;
+        font-size: 30px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    p{
+        margin-top: 16px;
+        color: v.$white;
+        font-family: v.$secondary-font;
+        font-size: 20px;
+        font-weight: 200;
+    }
+    @include m.breakpoint(desktop){
+        max-width: 1200px;
+        padding: 0px 165px 80px 165px;
+    }
+}
